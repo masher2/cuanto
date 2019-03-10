@@ -1,6 +1,6 @@
 # Cuanto
 
-An Alexa-like front-end for [Ledger]() (***and other stuff***)
+An Alexa-like front-end for [Ledger](https://www.ledger-cli.org/) (***and other stuff***)
 
 # Usage
 
