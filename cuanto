@@ -16,5 +16,11 @@ tengo() {
     espeak -v spanish "$amount"
 }
 
+llevo() {
+    case $1 in 
+        *) amount=$(timetrack.R --cuanto) ;;
+    esac
+    espeak -v spanish "$amount horas"
+}
 # Run any of the functions defined before
 "$@"
