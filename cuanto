@@ -12,7 +12,7 @@ tengo() {
     esac
 
     ledger_result=$(ledger -f $LEDGER_FILE balance --real --no-total "$account")
-    amount=$(echo "$ledger_result" | sed -n -E 's/^\s*\$?([0-9.]+).*/\1/p')
+    amount=$(echo "$ledger_result" | sed -n -E 's/,//g ; s/^\s*\$?([0-9.]+).*/\1/p')
     espeak -v spanish "$amount"
 }
 
@@ -21,6 +21,10 @@ llevo() {
         *) amount=$(timetrack.R --cuanto) ;;
     esac
     espeak -v spanish "$amount horas"
+}
+
+dolar() {
+    espeak -v spanish "$(/home/masher2/work/Jesus/dollr/airtm.py)"
 }
 # Run any of the functions defined before
 "$@"
